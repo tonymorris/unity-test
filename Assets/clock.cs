@@ -1,20 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class clock : MonoBehaviour {
 
-  IEnumerator Tick() {
+	public int time = 600;
+	public Text text;
 
-  }
+	void Tick() {
+		time--;
+		text.text = (time / 60).ToString() + ":" + (time % 60).ToString();
+	}
 
-	// Use this for initialization
-	void Start () {
-		
+	public void Start() {
+		InvokeRepeating ("Tick", 1, 1);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }
