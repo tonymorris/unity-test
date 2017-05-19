@@ -11,6 +11,11 @@ public class clock : MonoBehaviour {
 	public Text textBlack;
 	public Button button;
 	public bool white = true;
+	public Canvas settingsCanvas;
+
+	void Start() {
+		settingsCanvas.enabled = false;
+	}
 
 	void WhiteTick() {
 		timeWhite--;
